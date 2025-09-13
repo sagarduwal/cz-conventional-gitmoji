@@ -200,8 +200,10 @@ class CommitizenGitmojiCz(BaseCommitizen):
         """Return the questions to ask the user."""
         return [
             {
-                "type": "list",
+                "type": "select",
                 "name": "prefix",
+                "use_search_filter": True,
+                "use_jk_keys": False,
                 "message": "Select the type of change you are committing",
                 "choices": [
                     {
